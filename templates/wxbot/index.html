@@ -9,9 +9,27 @@
 
 <form method="post"> {% csrf_token %}
   <p>Content: <input type="text" name="content" /></p>
-  <p>User Id: <input type="text" name="userid" value="{{ user_id }}"/></p>
+  <p>User Id:
+      <select name="userid" id="userid">
+          <option value ="shirasaki_erica">shirasaki_erica</option>
+          <option value ="Rebecca_YF">Rebecca_YF</option>
+          <option value="Cccccc_T___">Cccccc_T___</option>
+      </select>
+  </p>
+  <input type="hidden" id="last_user" value="{{ user_id }}">
   <button type="submit" >提交</button><br>
 </form>
 
 </body>
 </html>
+
+<script type="text/javascript">
+    var lastUser = document.getElementById('last_user').value;
+    var sel = document.getElementById('userid');
+    for (var i=0; i<sel.length; i++) {
+      if (sel[i].value == lastUser) {
+        sel[i].selected = true;
+        break;
+      }
+    }
+</script>
