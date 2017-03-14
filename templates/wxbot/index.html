@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello, world. You're at the polls index.</title>
+</head>
+<body>
+{{ data111 }}
+
+<form method="post"> {% csrf_token %}
+  <p>Content: <input type="text" name="content" /></p>
+  <p>User Id: <input type="text" name="userid" value="{{ user_id }}"/></p>
+  <button type="submit" >提交</button><br>
+</form>
+
+</body>
+</html>
