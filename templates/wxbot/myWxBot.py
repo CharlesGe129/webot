@@ -40,7 +40,7 @@ class MyWXBot(WXBot):
 
     def group_reply(self, content):
         results = {
-            'cheese': ['aa', 'bb']
+            'cheese': ['aaa', 'bbb']
         }[content]
         num = random.random() * len(results)
         return results[int(num)]
